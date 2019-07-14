@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 
-import LandingPage from './components/LandingPage'
+import Nav from "./components/Navbar";
+import EmbedVideo from './components/EmbedVideo'
+import AmateurVideosGrid from './components/AmateurVideosGrid'
+
 
 
 
@@ -9,7 +12,9 @@ class App extends React.Component {
     render() {
       return (
         <div>
-          <LandingPage />
+          <Nav />
+          <EmbedVideo playsinline/>
+          < AmateurVideosGrid /> 
         </div>
       )
     }

@@ -1,0 +1,4 @@
+.streamate-logo {
+  width: calc(16.85 * (1vw + 1vh - 1vmin));
+  align-self: flex-start;
+}
