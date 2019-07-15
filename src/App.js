@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import Nav from "./components/Navbar";
 import EmbedVideo from './components/EmbedVideo'
 import AmateurVideosGrid from './components/AmateurVideosGrid'
+import MobileDisplay from './components/MobileDisplay'
 
 
 
@@ -14,7 +15,8 @@ class App extends React.Component {
         <div>
           <Nav />
           <EmbedVideo playsinline/>
-          < AmateurVideosGrid /> 
+          < AmateurVideosGrid />
+          <MobileDisplay /> 
         </div>
       )
     }
