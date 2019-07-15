@@ -5,6 +5,7 @@ import Nav from "./components/Navbar";
 import EmbedVideo from './components/EmbedVideo'
 import AmateurVideosGrid from './components/AmateurVideosGrid'
 import MobileDisplay from './components/MobileDisplay'
+import RatedStars from './components/RatedStars'
 
 
 
@@ -16,7 +17,8 @@ class App extends React.Component {
           <Nav />
           <EmbedVideo playsinline/>
           < AmateurVideosGrid />
-          <MobileDisplay /> 
+          <MobileDisplay />
+          <RatedStars /> 
         </div>
       )
     }
