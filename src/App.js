@@ -6,6 +6,8 @@ import EmbedVideo from './components/EmbedVideo'
 import AmateurVideosGrid from './components/AmateurVideosGrid'
 import MobileDisplay from './components/MobileDisplay'
 import RatedStars from './components/RatedStars'
+import FeaturesContainer from './components/FeaturesContainer'
+import FooterComponent from './components/FooterComponent'
 
 
 
@@ -18,7 +20,9 @@ class App extends React.Component {
           <EmbedVideo playsinline/>
           < AmateurVideosGrid />
           <MobileDisplay />
-          <RatedStars /> 
+          <RatedStars />
+          <FeaturesContainer />
+          <FooterComponent /> 
         </div>
       )
     }

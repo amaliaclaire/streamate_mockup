@@ -2,3 +2,21 @@
   width: calc(16.85 * (1vw + 1vh - 1vmin));
   align-self: flex-start;
 }
+
+.features-text {
+  background-color: pink;
+  color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   
+}
+
+.feature-image {
+  position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: -1;
+
+}
