@@ -55,12 +55,69 @@ class Connect4 {
 
       $board.on('click', '.col.empty', function() {
         const col = $(this).data('col');
+        const row = $(this).data('row');
+
+
         const $lastEmptyCell = findLastEmptyCell(col);
           $lastEmptyCell.removeClass(`empty next-${that.player} `);
           $lastEmptyCell.addClass(that.player);
+          $lastEmptyCell.data('player', that.player)
+
+          const winner = that.checkForWinner (row, col)
+          if (winner) {
+            // do some stuff
+            alert(`Game Over ${that.player} has won`)
+            return;
+          }
+
           that.player = (that.player === 'red') ? 'black' : 'red';
           $(this).trigger('mouseenter');
 
       })
+   }
+
+
+   checkForWinner (row, col) {
+     const that = this;
+
+     function $getCell(i, j) {
+       return $(`.col[data-row='${i}'][data-col='${j}']`);
+     }
+
+     function checkDirection(direction) {
+       let total = 0;
+       let i = row + direction.i;
+       let j = col + direction.j;
+       let $next = $getCell(i, j)
+
+       while( i >= 0 &&
+         i < that.ROWS &&
+         j >= 0 &&
+         j < that.COLS &&
+         $next.data('player') === that.player) {
+           total++;
+           i += direction.i;
+           j += direction.i;
+           $next = $getCell(i, j);
+         }
+     }
+
+     function checkWin (directionA, directionB) {
+       const total = 1 +
+       checkDirection(directionA) +
+       checkDirection(directionB)
+
+       if(total >- 4) {
+         return that.player;
+       } else {
+         return null;
+       }
+     }
+
+     function checkVerticals () {
+       return checkWin({i: -1, j:0}, {i: 1, j:0})
+     }
+
+     return checkVerticals()
    }
 }
