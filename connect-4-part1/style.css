@@ -1,3 +1,4 @@
+
 body {
   text-align: center;
 }
@@ -17,15 +18,15 @@ body {
 }
 
 .col.empty {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .next-red {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .next-black {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .col.red {
