@@ -17,5 +17,17 @@ body {
 }
 
 .next-red {
-  background-color: red; 
+  background-color: red;
+}
+
+.next-black {
+  background-color: black;
+}
+
+.col.red {
+  background-color: red;
+}
+
+.col.black {
+  background-color: black;
 }
