@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+}
+
+#connect4 {
+  background-color: pink;
+  display: inline-block;
+
+}
+
+.col {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
