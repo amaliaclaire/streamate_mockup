@@ -47,18 +47,19 @@ class Connect4 {
         const col = $(this).data('col');
         const $lastEmptyCell = findLastEmptyCell(col)
         $lastEmptyCell.addClass(`next-${that.player}`)
-      })
+      });
 
       $board.on('mouseleave', '.col', function () {
-        $('.col').removeClass(`next-${that.player}`)
-      })
+        $('.col').removeClass(`next-${that.player}`);
+      });
 
       $board.on('click', '.col.empty', function() {
         const col = $(this).data('col');
         const $lastEmptyCell = findLastEmptyCell(col);
-          $lastEmptyCell.removeClass('empty');
+          $lastEmptyCell.removeClass(`empty next-${that.player} `);
           $lastEmptyCell.addClass(that.player);
           that.player = (that.player === 'red') ? 'black' : 'red';
+          $(this).trigger('mouseenter');
 
       })
    }

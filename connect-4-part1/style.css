@@ -16,6 +16,10 @@ body {
   margin: 5px;
 }
 
+.col.empty {
+  cursor: pointer; 
+}
+
 .next-red {
   background-color: red;
 }
