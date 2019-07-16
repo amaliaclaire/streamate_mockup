@@ -4,6 +4,7 @@ class Connect4 {
     this.COLS = 7;
     this.selector = selector;
     this.createGrid();
+    this.setupEventListeners();
   }
 
   createGrid() {
@@ -18,6 +19,13 @@ class Connect4 {
         }
         $board.append($row);
     }
+  }
+    setupEventListeners () {
+       const $board = $(this.selector);
 
+      $board.on('mouseenter', '.col.empty', function () {
+        console.log('here', this);
+      })
+    
   }
 }
